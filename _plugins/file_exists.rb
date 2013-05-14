@@ -1,9 +1,9 @@
 module Jekyll
     class FileExistsTag < Liquid::Tag
         
-        def initialize(tag_name, text, tokens)
+        def initialize(tag_name, path, tokens)
             super
-            @text = text
+            @path = path
         end
 
         def render(context)
@@ -13,7 +13,7 @@ module Jekyll
             # url = Liquid::Template.parse(@text).render context
  
             # this returns true
-            "#{@text} #{File.exist?("images/sample.png")}"
+            "#{File.exist?(@path.strip!)}"
             
             # this returns false
             # "#{@text} #{File.exist?("images/reference_designs/page-detail-this-does-not-exist.png")}"
