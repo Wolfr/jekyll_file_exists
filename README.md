@@ -29,7 +29,7 @@ I’m using the plugin on [My Morning Routine](http://mymorningroutine.com) to c
 We’re saving the plugins output to `author_photo`:  
 `{% capture author_photo %}{% file_exists {{ author_photo_url }} %}{% endcapture %}`
 
-#### 2. Write a if/else clause for the result
+#### 2. Write an if/else clause for the result
 
 If the author photo exits `true` we gonna use it, otherwise `false` we use the placeholder image.  
 ```liquid
