@@ -18,7 +18,7 @@ The output will be `true` or `false`.
 You can also use liquid objects within the tag:  
 `{% file_exists {{ author_photo_url }} %}`
 
-**Important:** The path needs to start at the root level of your Jekyll project and without a slash `/` at the beginning.
+**Important:** The path needs to start at the root level of your Jekyll project and without a leading slash `/`.
 
 ### Production Example
 
@@ -31,9 +31,9 @@ We’re saving the plugins output to `author_photo`:
 
 #### 2. Write an if/else clause for the result
 
-If the author photo exits `true` we gonna use it, otherwise `false` we use the placeholder image.  
+If the author photo exists `true` we gonna use it, otherwise `false` we use the placeholder image.  
 ```liquid
-{% if author_photo == "true" %}
+{% if author_photo == true %}
   {% assign author_photo = author_photo_url | prepend: "/" | prepend: site.baseurl %}
 {% else %}
   {% assign author_photo = "no-photo.jpg" | prepend: "/images/routines/" | prepend: site.baseurl %}
@@ -43,5 +43,4 @@ If the author photo exits `true` we gonna use it, otherwise `false` we use the p
 ## Credits
 
 * [Johan Ronsse](https://github.com/Wolfr/jekyll_file_exists)
-* [Ruben Vermeersch](https://github.com/rubenv)
 * [Michael Xander](https://github.com/michaelx)
