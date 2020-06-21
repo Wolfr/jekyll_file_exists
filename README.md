@@ -13,7 +13,7 @@ Copy `file_exists.rb` into the `/_plugins/` directory of your Jekyll project.
 The plugin adds a new custom liquid tag, which can be used as follows:  
 `{% file_exists images/file-example.jpg %}`
 
-The output will be `true` or `false`.
+The output will be `"true"` or `"false"` (a string, not a boolean).
 
 You can also use liquid objects within the tag:  
 `{% file_exists {{ author_photo_url }} %}`
@@ -31,7 +31,7 @@ We’re saving the plugins output to `author_photo`:
 
 #### 2. Write an if/else clause for the result
 
-If the author photo exists `true` we gonna use it, otherwise `false` we use the placeholder image.  
+If the author photo exists `"true"` we gonna use it, otherwise `"false"` we use the placeholder image.  
 ```liquid
 {% if author_photo == "true" %}
   {% assign author_photo = author_photo_url | prepend: "/" | prepend: site.baseurl %}
