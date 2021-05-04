@@ -4,7 +4,17 @@ A Jekyll plugin that makes it easily possible to check the existence of a file.
 
 ## Installation
 
-Copy `file_exists.rb` into the `/_plugins/` directory of your Jekyll project.
+Add `jekyll_file_exists` to your `Gemfile` in the `:jekyll_plugins` group.
+```ruby
+ # Gemfile
+
+ gem 'jekyll', ~> '4.0'
+
+ group :jekyll_plugins do
+   # (other jekyll plugins)
+   gem 'jekyll_file_exists', :git => 'git://github.com/asperduti/jekyll_file_exists.git'
+ end
+```
 
 ## Usage
 
