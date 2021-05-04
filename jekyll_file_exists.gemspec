@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.description   = spec.summary
   spec.homepage      = 'https://github.com/Wolfr/jekyll_file_exists'
   spec.license       = 'MIT'
-  spec.files         = ['lib/file_exists.rb']
+  spec.files         = ['lib/jekyll_file_exists.rb']
   spec.require_paths = ['lib']
 
 end
